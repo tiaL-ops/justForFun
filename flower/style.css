@@ -1,0 +1,195 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background and Layout */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1b1b2f; /* Dark background for contrast */
+}
+
+/* Bell Jar (Glass Dome) */
+.bell-jar {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light frosted effect */
+  border-radius: 100px 100px 0 0; /* Round top */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Flower Structure */
+.flower {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 20px;
+}
+
+/* Stem */
+.stem {
+  width: 6px;
+  height: 150px;
+  background-color: #228b22; /* Green stem color */
+}
+
+/* Leaves */
+.leaf {
+  position: absolute;
+  width: 25px;
+  height: 50px;
+  background-color: #006400; /* Dark green for leaves */
+  border-radius: 50%;
+}
+
+.leaf-left {
+  transform: rotate(-35deg);
+  left: -25px;
+  top: 40px;
+}
+
+.leaf-right {
+  transform: rotate(35deg);
+  right: -25px;
+  top: 40px;
+}
+/* Petals */
+.petals {
+    position: relative;
+    top: -175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .petal {
+    width: 60px;
+    height: 90px; 
+    background: radial-gradient(circle at top, #ff4d4d, #d42a2a); 
+    border-radius: 60% 60% 0 0;
+    position: absolute;
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2); 
+  }
+  
+  /* Position each petal with slight overlap and rotation for a realistic flower look */
+  .petal-1 {
+    transform: rotate(-15deg);
+    top: -25px;
+  }
+  
+  .petal-2 {
+    transform: rotate(15deg);
+    top: -25px;
+  }
+  
+  .petal-3 {
+    transform: rotate(-45deg);
+    left: 18px;
+  }
+  
+  .petal-4 {
+    transform: rotate(45deg);
+    right: 18px;
+  }
+  
+
+/* Falling Petal Animation */
+.falling-petal {
+    width: 30px;
+    height: 50px; 
+    background: radial-gradient(circle at top, #ff4d4d, #d42a2a); 
+    border-radius: 60% 60% 0 0;
+    position: absolute;
+    top: 10px;
+    transform: rotate(15deg);
+    animation: fall 5s infinite ease-in-out;
+    opacity: 0;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateX(0) translateY(0) rotate(15deg);
+      opacity: 1;
+    }
+    25% {
+      transform: translateX(-10px) translateY(100px) rotate(25deg);
+    }
+    50% {
+      transform: translateX(10px) translateY(200px) rotate(35deg);
+      opacity: 0.8;
+    }
+    75% {
+      transform: translateX(-15px) translateY(250px) rotate(55deg);
+    }
+    100% {
+      transform: translateX(20px) translateY(300px) rotate(75deg);
+      opacity: 0;
+    }
+  }
+
+/* Poem Display Styling */
+.poem-display {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    color: #39ff14; 
+  }
+  
+  /* Poem Line Styling with Typing Animation */
+  .poem-line {
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden; 
+    border-right: 2px solid #39ff14; 
+    width: 0; /* Start hidden */
+    animation: typing 3s steps(30, end) forwards, blink-caret 0.5s step-end infinite;
+  }
+  
+  /* Typing Effect for Each Line with Delay */
+  .poem-line:nth-child(1) {
+    animation-delay: 0s, 0s; 
+  }
+  
+  .poem-line:nth-child(2) {
+    animation-delay: 3.5s, 3.5s; 
+  }
+  
+  .poem-line:nth-child(3) {
+    animation-delay: 7s, 7s; 
+  }
+  
+  /* Typing Keyframes */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Blinking Cursor */
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  
+  
+  
