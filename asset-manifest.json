@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/justForFun/static/css/main.e6c13ad2.css",
+    "main.js": "/justForFun/static/js/main.b383a4ae.js",
+    "static/js/453.1e8a7d26.chunk.js": "/justForFun/static/js/453.1e8a7d26.chunk.js",
+    "index.html": "/justForFun/index.html",
+    "main.e6c13ad2.css.map": "/justForFun/static/css/main.e6c13ad2.css.map",
+    "main.b383a4ae.js.map": "/justForFun/static/js/main.b383a4ae.js.map",
+    "453.1e8a7d26.chunk.js.map": "/justForFun/static/js/453.1e8a7d26.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.b383a4ae.js"
+  ]
+}
